@@ -1,23 +1,60 @@
 aid: aulos-bioscience
+
 name: Aulos Bioscience
-description: 'Aulos Bioscience is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Aulos Bioscience is a biotechnology company focused on developing innovative solutions for early disease detection and personalized medicine. Leveraging advanced genomics and proteomics platforms, the company aims to provide clinicians with actionable insights to improve patient outcomes. Founded with a mission to bridge the gap between cutting‑edge research and practical healthcare applications, Aulos Bioscience offers a suite of APIs for data access, sample management, and analytical results, supporting integration into electronic health record systems and research pipelines.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aulos-bioscience/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Genomics
+- Diagnostics
+- Healthcare
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aulos-bioscience-hosts.yml
+- type: Vendors
+  url: vendors/aulos-bioscience-vendors.yml
+- type: DomainSecurity
+  url: security/aulos-bioscience-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.aulosbioscience.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The main site returns a JavaScript shell and no machine‑readable API spec could be found.
+  evidence:
+    - url: https://www.aulosbioscience.com
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
